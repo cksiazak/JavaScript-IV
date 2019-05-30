@@ -63,11 +63,19 @@ class ProjectManager extends Instructor {
 
 let dan = new Instructor({
     name: "Dan",
-    age: "35?",
-    location: "The Matrix",
+    age: 35 + "(?)",
+    location: "basically The Matrix",
     specialty: "Javascript",
     favLanguage: "Javascript",
     catchPhrase: "Cult of Functionality",
 })
 
-console.log(dan.demo(dan.favLanguage))
+let chris = new Student({
+    name: "Chris",
+    age: 23,
+    location: "El Paso",
+    previousBackground: "User Specialist",
+    className: "Web PT7",
+    favSubjects: ['Javascript', 'CSS', 'HTML'],
+})
+
