@@ -83,15 +83,28 @@ Prototype Refactor
     * should inherit takeDamage() from CharacterStats
   */
   
-  function Humanoid(humAttrs) {
-    CharacterStats.call(this, humAttrs);
-    this.team = humAttrs.team;
-    this.weapons = humAttrs.weapons;
-    this.language = humAttrs.language;
-  }
-  Humanoid.prototype = Object.create(CharacterStats.prototype);
-  Humanoid.prototype.greet = function() {
-    return `${this.name} offers a greeting in ${this.language}`
+//   function Humanoid(humAttrs) {
+//     CharacterStats.call(this, humAttrs);
+//     this.team = humAttrs.team;
+//     this.weapons = humAttrs.weapons;
+//     this.language = humAttrs.language;
+//   }
+//   Humanoid.prototype = Object.create(CharacterStats.prototype);
+//   Humanoid.prototype.greet = function() {
+//     return `${this.name} offers a greeting in ${this.language}`
+//   }
+
+  class Humanoid {
+      constructor(humAttrs) {
+          super(charAttrs);
+          this.team = humAttrs.team;
+          this.weapons = humAttrs.weapons;
+          this.language = humAttrs.language;
+      }
+
+      greet() {
+        return `${this.name} offers a greeting in ${this.language}`
+      }
   }
    
   /*
