@@ -60,3 +60,14 @@ class ProjectManager extends Instructor {
         return `${this.name} debugs ${student}'s code on ${subjecct}` 
     }
 }
+
+let dan = new Instructor({
+    name: "Dan",
+    age: "35?",
+    location: "The Matrix",
+    specialty: "Javascript",
+    favLanguage: "Javascript",
+    catchPhrase: "Cult of Functionality",
+})
+
+console.log(dan.demo(dan.favLanguage))
