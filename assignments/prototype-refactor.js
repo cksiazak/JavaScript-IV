@@ -53,13 +53,24 @@ Prototype Refactor
     * should inherit destroy() from GameObject's prototype
   */
   
-  function CharacterStats(charAttrs) {
-    GameObject.call(this, charAttrs);
-    this.healthPoints = charAttrs.healthPoints;
-  }
-  CharacterStats.prototype = Object.create(GameObject.prototype);
-  CharacterStats.prototype.takeDamage = function () {
-    return `${this.name} took damage`;
+//   function CharacterStats(charAttrs) {
+//     GameObject.call(this, charAttrs);
+//     this.healthPoints = charAttrs.healthPoints;
+//   }
+//   CharacterStats.prototype = Object.create(GameObject.prototype);
+//   CharacterStats.prototype.takeDamage = function () {
+//     return `${this.name} took damage`;
+//   }
+
+  class CharacterStats {
+      constructor(charAttrs) {
+          super(attributes);
+          this.healthPoints = charAttrs;
+      }
+
+      takeDamage() {
+        return `${this.name} took damage`;
+      }
   }
   
   /*
