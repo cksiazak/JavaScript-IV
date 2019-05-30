@@ -79,3 +79,13 @@ let chris = new Student({
     favSubjects: ['Javascript', 'CSS', 'HTML'],
 })
 
+let taylor = new ProjectManager({
+    name: "Taylor",
+    age: "not a day over 21",
+    location: "the far side of the continent",
+    specialty: "basically everything",
+    favLanguage: "Scratch",
+    catchPhrase: "Hey guys",
+    gradClassName: "WEB(something)",
+    favInstructor: "Josh",
+})
