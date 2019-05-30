@@ -62,10 +62,10 @@ Prototype Refactor
 //     return `${this.name} took damage`;
 //   }
 
-  class CharacterStats {
+  class CharacterStats extends GameObject {
       constructor(charAttrs) {
-          super(attributes);
-          this.healthPoints = charAttrs;
+          super(charAttrs);
+          this.healthPoints = charAttrs.healthPoints;
       }
 
       takeDamage() {
@@ -94,9 +94,9 @@ Prototype Refactor
 //     return `${this.name} offers a greeting in ${this.language}`
 //   }
 
-  class Humanoid {
+  class Humanoid extends CharacterStats{
       constructor(humAttrs) {
-          super(charAttrs);
+          super(humAttrs);
           this.team = humAttrs.team;
           this.weapons = humAttrs.weapons;
           this.language = humAttrs.language;
