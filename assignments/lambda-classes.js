@@ -83,7 +83,7 @@ let taylor = new ProjectManager({
     location: "the far side of the continent",
     specialty: "basically everything",
     favLanguage: "Scratch",
-    catchPhrase: "Hey guys",
+    catchPhrase: "Hello everyone",
     gradClassName: "WEB(something)",
     favInstructor: "Josh",
 })
@@ -104,4 +104,15 @@ let michaelangelo = new Student({
     previousBackground: "Crime fighting turtle",
     className: "PizzaScience5",
     favSubjects: ['ninja', 'skateboarding', 'pizza'],
+})
+
+let donatello = new ProjectManager({
+    name: "Donatello",
+    age: 18,
+    location: "NY sewer",
+    specialty: "Technology",
+    favLanguage: "English",
+    catchPhrase: "Uh....",
+    gradClassName: "Ninja14",
+    favInstructor: "Splinter",
 })
