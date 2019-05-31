@@ -69,7 +69,6 @@ let dan = new Instructor({
     favLanguage: "Javascript",
     catchPhrase: "Cult of Functionality",
 })
-
 let chris = new Student({
     name: "Chris",
     age: 23,
@@ -78,7 +77,6 @@ let chris = new Student({
     className: "Web PT7",
     favSubjects: ['Javascript', 'CSS', 'HTML'],
 })
-
 let taylor = new ProjectManager({
     name: "Taylor",
     age: "not a day over 21",
