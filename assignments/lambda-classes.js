@@ -87,3 +87,12 @@ let taylor = new ProjectManager({
     gradClassName: "WEB(something)",
     favInstructor: "Josh",
 })
+
+let cam = new Instructor({
+    name: "Splinter",
+    age: 75,
+    location: "New York",
+    specialty: "Teaching",
+    favLanguage: "English",
+    catchPhrase: "(philosophical quote)",
+})
