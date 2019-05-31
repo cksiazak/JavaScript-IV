@@ -57,13 +57,11 @@ class Student extends Person{
         var text = "";
 
         while (i < 70) {
-            text += `${this.name} will need to try again`
-
-            if (i >= 70) {
-                text += `${this.name} can graduate`;
-                break;
-            }
+            text += `${this.name} will need to try again \n`
             i++
+        }
+        if (i >= 70) {
+            text += `${this.name} can graduate \n`;
         }
         return text;
     }
@@ -99,7 +97,7 @@ let chris = new Student({
     previousBackground: "User Specialist",
     className: "Web PT7",
     favSubjects: ['Javascript', 'CSS', 'HTML'],
-    score: 88,
+    score: 75,
 })
 let taylor = new ProjectManager({
     name: "Taylor",
