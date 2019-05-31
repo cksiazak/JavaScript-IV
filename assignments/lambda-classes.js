@@ -88,11 +88,20 @@ let taylor = new ProjectManager({
     favInstructor: "Josh",
 })
 
-let cam = new Instructor({
+let splinter = new Instructor({
     name: "Splinter",
     age: 75,
     location: "New York",
     specialty: "Teaching",
     favLanguage: "English",
     catchPhrase: "(philosophical quote)",
+})
+
+let michaelangelo = new Student({
+    name: "Michaelangelo",
+    age: 17,
+    location: "New York",
+    previousBackground: "Crime fighting turtle",
+    className: "PizzaScience5",
+    favSubjects: ['ninja', 'skateboarding', 'pizza'],
 })
