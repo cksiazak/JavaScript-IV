@@ -25,6 +25,9 @@ class Instructor extends Person {
     grade(student, subject) {
         return `${student} receives a pergect score on ${subject}`
     }
+    gradeWork(studentScore) {
+        return studentScore - (Math.random() * 20);
+    }
 }
 
 class Student extends Person{
@@ -33,6 +36,7 @@ class Student extends Person{
         this.previousBackground = studentAttrs.previousBackground;
         this.className = studentAttrs.className;
         this.favSubjects = studentAttrs.favSubjects;
+        this.score = studentAttrs.score;
     }
 
     listsSubjects() {
@@ -43,6 +47,25 @@ class Student extends Person{
     }
     sprintChallenge(subject) {
         return `${this.name} has begun sprint challenge on ${subject}`
+    }
+    graduate() {
+        let gradeStudentsWork = (studentScore) => {
+            return studentScore - (Math.random() * 20);
+        }
+
+        let i = gradeStudentsWork(this.score);
+        var text = "";
+
+        while (i < 70) {
+            text += `${this.name} will need to try again`
+
+            if (i >= 70) {
+                text += `${this.name} can graduate`;
+                break;
+            }
+            i++
+        }
+        return text;
     }
 }
 
@@ -57,7 +80,7 @@ class ProjectManager extends Instructor {
         return `${this.name} announces to ${channel}, @channel standy times!`
     }
     debugsCode(student, subject) {
-        return `${this.name} debugs ${student}'s code on ${subjecct}` 
+        return `${this.name} debugs ${student}'s code on ${subject}` 
     }
 }
 
@@ -76,6 +99,7 @@ let chris = new Student({
     previousBackground: "User Specialist",
     className: "Web PT7",
     favSubjects: ['Javascript', 'CSS', 'HTML'],
+    score: 88,
 })
 let taylor = new ProjectManager({
     name: "Taylor",
@@ -104,6 +128,7 @@ let michaelangelo = new Student({
     previousBackground: "Crime fighting turtle",
     className: "PizzaScience5",
     favSubjects: ['ninja', 'skateboarding', 'pizza'],
+    score: 76,
 })
 
 let donatello = new ProjectManager({
@@ -116,3 +141,6 @@ let donatello = new ProjectManager({
     gradClassName: "Ninja14",
     favInstructor: "Splinter",
 })
+
+// console.log(splinter.gradeWork(chris.score))
+console.log(chris.graduate())
